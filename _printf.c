@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+ * _printf - prints everything the normal printf prints
+ * @format: list of argument types passed to the function
+ *
+ * Return: number of characters printed
+ */
+
 int _printf(const char *format, ...)
 {
 	va_list args;
