@@ -35,5 +35,11 @@ int _printf(const char *format, ...)
 		{
 			return (-1);
 		}
+
+		if (format[itern + 1] == '%')
+		{
+			itern = itern + 2;
+		}
+		itern++;
 	}
 }
