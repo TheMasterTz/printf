@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+ * print_int - prints an integer to standard output.
+ * @args: list of variadic function.
+ *
+ * Return: restituisce il numero di caratteri
+ */
+
 int print_int(va_list args)
 {
 	int array[10];
