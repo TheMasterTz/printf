@@ -16,5 +16,12 @@ int _printf(const char *format, ...)
 			count++;
 			itern++;
 		}
+
+		if (format[itern] == NULL)
+		{
+			return (count);
+		}
+
+		punt = get_struct(&format[itern]);
 	}
 }
