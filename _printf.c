@@ -22,6 +22,6 @@ int _printf(const char *format, ...)
 			return (count);
 		}
 
-		punt = get_struct(&format[itern]);
+		punt = get_struct(&format[itern + 1]);
 	}
 }
