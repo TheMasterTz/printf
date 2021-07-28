@@ -42,4 +42,6 @@ int _printf(const char *format, ...)
 		}
 		itern++;
 	}
+	va_end(args);
+	return (count);
 }
