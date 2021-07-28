@@ -23,5 +23,17 @@ int _printf(const char *format, ...)
 		}
 
 		punt = get_struct(&format[itern + 1]);
+
+		if (punt != NULL)
+		{
+			c = c + punt(args);
+			itern = itern + 2;
+			continue;
+		}
+
+		if (format[itern + 1] == NULL)
+		{
+			return (-1);
+		}
 	}
 }
