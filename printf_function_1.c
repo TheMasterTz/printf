@@ -13,4 +13,17 @@ int print_int(va_list args)
 		m = m / 10;
 		array[iter] = (var / m) % 10;
 	}
+
+	if (var < 0)
+	{
+		count++;
+		_putchar(45);
+
+		for (iter = 0; iter < 10; iter++)
+		{
+			array[iter] = array[iter] * -1;
+		}
+	}
+
+
 }
