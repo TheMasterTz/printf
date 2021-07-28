@@ -25,5 +25,14 @@ int print_int(va_list args)
 		}
 	}
 
-
+	for (iter = 0, sum = 0; iter < 10; iter++)
+	{
+		sum = sum + array[iter];
+		if (sum != 0 || iter == 9)
+		{
+			putchar(48 + array[iter]);
+			count++;
+		}
+	}
+	return (count);
 }
