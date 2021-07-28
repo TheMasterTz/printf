@@ -1,25 +1,28 @@
-#include <stdarg.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "holberton.h"
 
-int (*get_struct(const char *p))(va_list)
+int print_port(va_list args)
 {
-   specifier_f specifiers[] = {
-       {"i", print_int},
-       {"d", print_int},
-       {"c", print_char},
-       {"s", print_string},
-       {"%", print_port},
-       {NULL, NULL}
-   };
-    int i;
+    putchar('%');
+    return(1);
+}
 
-    for (i = 0; specifiers[i].specifier != NULL; i++)
+int print_char(va_list args)
+{
+    char ch = va_arg(args, int);
+
+    putchar(ch);
+    return (1);
+}
+int print_string(va_list args)
+{
+    int count;
+    char *str = va_arg(args, char *);
+
+    if (str == NULL)
+        str = "(null)";
+    for (count = 0; str[count]; count++)
     {
-        if (*(specifiers[i].specifier) == *p)
-        {
-            break;
-        }
+        putchar(str[count]);
     }
-    return (specifiers[i].punt);
+    return (count);
 }
