@@ -1,0 +1,46 @@
+.TH man 3 "28 July 2021" "_printf man page"
+.SH NAME
+.B _printf
+- Formatted output conversion.
+.SH SYNOPSIS
+.B #include "holberton.h"
+
+.B int _printf(const char *
+.I format
+.SH DESCRIPTION
+.B _printf()
+_print_ prints an output according to the format
+conversion specifiers 
+.I format
+string that specifies how subsequent arguments are converted for output. 
+.SH Return value
+On successful return, these functions return the number of characters printed, excluding the null byte used to end output to strings.
+
+in case of an error it returns a -1 
+.SH Format of the format string
+The format string consists of 0 or more directives that are copied to the output stream.
+The format string is also made up of conversion specifications, 
+each of which results in getting zero or more subsequent arguments.  
+depending on the character, the specifier is different for example :
+.TP
+.BR c
+The int argument is converted to an char, then the resulting character is written
+.TP
+.B s
+prints a string in ASCII format and strange characters are printed with the character "?"
+.TP
+.B d, i
+The int argument is converted to signed decimal notation
+.TP
+.B %
+A '%' is written but no argument is converted. The complete version specification is '%%'
+.SH EXAMPLE
+prints number and characters and strings
+
+#include "holberton.h"
+
+_printf("%c, %s %d, %i\\n",prints, number and characters and strings);
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Sebastian Rengifo, Christian Fernando Bolaños
