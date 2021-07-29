@@ -39,6 +39,9 @@ int _printf(const char *format, ...)
 			continue;
 		}
 
+		if (format[0] == '%')
+			return (0);
+
 		if (!format[itern + 1])
 			return (-1);
 
