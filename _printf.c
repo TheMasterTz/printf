@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	int (*punt)(va_list);
 	unsigned int itern, c = 0;
 
-	if (!format || (format[0] == '%' && !format[1]))
+	if (!format)
 		return (-1);
 
 	va_start(args, format);
