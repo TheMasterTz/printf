@@ -11,9 +11,9 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int (*punt)(va_list);
-	int itern, count = 0;
+	unsigned int itern, c = 0;
 
-	if (format == NULL)
+	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
 
 	va_start(args, format);
@@ -22,13 +22,13 @@ int _printf(const char *format, ...)
 	{
 		while (format[itern] != '%' && format[itern])
 		{
-			_putchar(format[itern]);
-			count++;
+			putchar(format[itern]);
+			c++;
 			itern++;
 		}
 
-		if (format[itern] == NULL)
-			return (count);
+		if (!format[itern])
+			return (c);
 
 		punt = get_struct(&format[itern + 1]);
 
@@ -39,13 +39,14 @@ int _printf(const char *format, ...)
 			continue;
 		}
 
-		if (format[itern + 1] == NULL)
+		if (!format[itern + 1])
 			return (-1);
 
 		if (format[itern + 1] == '%')
-			itern = itern + 2;
+	        	itern = itern + 2;
+
 		itern++;
 	}
 	va_end(args);
-	return (count);
+	return (c);
 }
