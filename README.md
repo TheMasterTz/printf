@@ -1,5 +1,8 @@
 # project _printf 
+
 ![enter image description here](https://www.holbertonschool.com/holberton-logo.png)
+
+
 `_printf` is a custom function of the C function named `printf`. Which works with the conversion specifiers which are `%i`, `%d`, `%c`, `%s` and `%%`.
 
  ## File Descriptions
@@ -26,10 +29,12 @@
 **Download From a Browser:**
  1. To install the _printf function you must download this entire
     repository and go to where you designate `download or clone`.
-    ![enter image description here](https://www.wikihow.com/images/thumb/1/1e/Download-a-GitHub-Folder-Step-3.jpg/v4-728px-Download-a-GitHub-Folder-Step-3.jpg.webp)
+ 
+![enter image description here](https://www.wikihow.com/images/thumb/1/1e/Download-a-GitHub-Folder-Step-3.jpg/v4-728px-Download-a-GitHub-Folder-Step-3.jpg.webp)
  
  2. Click the `Download ZIP button.` This action will download the
     repository to the computer as a `.zip` file.
+
 ![enter image description here](https://www.wikihow.com/images/thumb/2/21/Download-a-GitHub-Folder-Step-4.jpg/v4-728px-Download-a-GitHub-Folder-Step-4.jpg.webp)
 
 **Download It From Your Donsole:**
