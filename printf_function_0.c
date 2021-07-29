@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+ * print_port -print sign porcetaje
+ * print_char -char to print
+ * print_string -number of chars printed
+ */
 int print_port(va_list args)
 {
 putchar('%');
