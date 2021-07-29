@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 int (*get_struct(const char *p))(va_list)
-{
+ {
 specifier_f specifiers[] = {
 {"i", print_int},
 {"d", print_int},
