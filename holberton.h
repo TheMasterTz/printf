@@ -15,9 +15,9 @@ typedef struct specifier_t
 int _putchar(char pt);
 int (*get_struct(const char *p))(va_list);
 int get_print(char *p, va_list args);
-int print_int(va_list args);
-int print_char(va_list args);
-int print_string(va_list args);
-int print_port(va_list args);
+int print_int(va_list i);
+int print_char(va_list c);
+int print_string(va_list s);
+int print_port(va_list p);
 int _printf(const char *format, ...);
 #endif
