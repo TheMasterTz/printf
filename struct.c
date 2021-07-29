@@ -1,6 +1,4 @@
-#include <stdarg.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "holberton.h"
 
 int (*get_struct(const char *p))(va_list)
 {
