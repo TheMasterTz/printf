@@ -37,7 +37,7 @@ int print_int(va_list i)
 		sum = sum + array[iter];
 		if (sum != 0 || iter == 9)
 		{
-			putchar(48 + array[iter]);
+			_putchar(48 + array[iter]);
 			count++;
 		}
 	}

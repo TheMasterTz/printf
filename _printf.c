@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 	{
 		while (format[itern] != '%' && format[itern])
 		{
-			putchar(format[itern]);
+			_putchar(format[itern]);
 			c++;
 			itern++;
 		}
