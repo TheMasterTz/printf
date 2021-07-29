@@ -7,7 +7,6 @@
 
 .B int _printf(const char *
 .I format
-.B , ...)
 .SH DESCRIPTION
 .B _printf()
 _print_ prints an output according to the format
@@ -31,10 +30,7 @@ The int argument is converted to an char, then the resulting character is writte
 prints a string in ASCII format and strange characters are printed with the character "?"
 .TP
 .B d, i
-The int argument is converted to signed decimal notation.
-.TP
-.B p
-Address is printed in hexadecimal.
+The int argument is converted to signed decimal notation
 .TP
 .B %
 A '%' is written but no argument is converted. The complete version specification is '%%'
