@@ -2,7 +2,7 @@
 
 int print_port(va_list p)
 {
-	putchar('%');
+	_putchar('%');
 	(void) p;
 	return (1);
 }
@@ -11,7 +11,7 @@ int print_char(va_list c)
 {
 	char ch = va_arg(c, int);
 
-	putchar(ch);
+	_putchar(ch);
 	return (1);
 }
 int print_string(va_list s)
@@ -23,7 +23,7 @@ int print_string(va_list s)
 		str = "(null)";
 	for (count = 0; str[count]; count++)
 	{
-		putchar(str[count]);
+		_putchar(str[count]);
 	}
 	return (count);
 }
