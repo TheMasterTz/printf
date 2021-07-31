@@ -1,12 +1,10 @@
 #include "holberton.h"
-
 /**
  * _printf - prints everything the normal printf prints
  * @format: list of argument types passed to the function
  *
  * Return: number of characters printed
  */
-
 int _printf(const char *format, ...)
 {
 	va_list args;
@@ -46,7 +44,7 @@ int _printf(const char *format, ...)
 			return (-1);
 
 		if (format[itern + 1] == '%')
-	        	itern = itern + 2;
+			itern = itern + 2;
 
 		itern++;
 	}

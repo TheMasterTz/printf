@@ -4,7 +4,7 @@ int print_port(va_list p)
 {
 	putchar('%');
 	(void) p;
-	return(1);
+	return (1);
 }
 
 int print_char(va_list c)
