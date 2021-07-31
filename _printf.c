@@ -12,10 +12,8 @@ int _printf(const char *format, ...)
 	unsigned int itern, c = 0;
 
 	if (!format)
-	return (-1);
-
+		return (-1);
 	va_start(args, format);
-
 	for (itern = 0; format[itern] != '\0';)
 	{
 		while (format[itern] != '%' && format[itern])
@@ -26,9 +24,7 @@ int _printf(const char *format, ...)
 		}
 		if (!format[itern])
 			return (c);
-
 		punt = get_struct(&format[itern + 1]);
-
 		if (punt != NULL)
 		{
 			c = c + punt(args);
@@ -41,12 +37,8 @@ int _printf(const char *format, ...)
 			_putchar(format[itern + 1]);
 			itern++;
 		}
-
 		if (format[0] == '%' && !format[1])
 			return (0);
-
-		if (!format[itern + 1])
-			return (-1);
 	}
 	va_end(args);
 	return (c);
