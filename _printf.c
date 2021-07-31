@@ -7,9 +7,9 @@
  */
 int _printf(const char *format, ...)
 {
-va_list args;
-int (*punt)(va_list);
-unsigned int itern, c = 0;
+	va_list args;
+	int (*punt)(va_list);
+	unsigned int itern, c = 0;
 
 	if (!format)
 	return (-1);
@@ -25,30 +25,29 @@ unsigned int itern, c = 0;
 			itern++;
 		}
 		if (!format[itern])
-	return (c);
+			return (c);
 
-	punt = get_struct(&format[itern + 1]);
+		punt = get_struct(&format[itern + 1]);
 
-	if (punt != NULL)
-	{
-		c = c + punt(args);
-		itern = itern + 2;
-		continue;
+		if (punt != NULL)
+		{
+			c = c + punt(args);
+			itern = itern + 2;
+			continue;
+		}
+		else
+		{
+			_putchar(format[itern]);
+			_putchar(format[itern + 1]);
+			itern++;
+		}
+
+		if (format[0] == '%' && !format[1])
+			return (0);
+
+		if (!format[itern + 1])
+			return (-1);
 	}
-	
-	else
-	{
-		_putchar(format[itern]);
-		_putchar(format[itern + 1]);
-		itern++;
-	}
-
-	if (format[0] == '%' && !format[1])
-		return (0);
-
-	if (!format[itern + 1])
-		return (-1);
-
 	va_end(args);
 	return (c);
 }
