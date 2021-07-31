@@ -35,23 +35,20 @@ unsigned int itern, c = 0;
 		itern = itern + 2;
 		continue;
 	}
+	
 	else
 	{
-	_putchar(format[itern]);
-	_putchar(format[itern + 1]);
-	itern++;
-}
+		_putchar(format[itern]);
+		_putchar(format[itern + 1]);
+		itern++;
+	}
 
-if (format[0] == '%' && !format[1])
-return (0);
+	if (format[0] == '%' && !format[1])
+		return (0);
 
-if (!format[itern + 1])
-return (-1);
+	if (!format[itern + 1])
+		return (-1);
 
-if (format[itern + 1] == '%')
-itern = itern + 2;
-itern++;
-}
-va_end(args);
-return (c);
+	va_end(args);
+	return (c);
 }
